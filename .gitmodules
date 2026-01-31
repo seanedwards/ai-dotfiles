@@ -1,0 +1,3 @@
+[submodule "niri-plugin/skills/configuring-niri/docs"]
+	path = niri-plugin/skills/configuring-niri/docs
+	url = git@github.com:YaLTeR/niri.wiki.git

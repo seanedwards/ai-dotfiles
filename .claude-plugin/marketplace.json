@@ -1,0 +1,24 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ai-dotfiles",
+  "version": "1.0.0",
+  "owner": {
+    "name": "edwards"
+  },
+  "metadata": {
+    "description": "Personal Claude Code plugins for system administration and dotfile management on Bazzite Linux",
+    "pluginRoot": "./"
+  },
+  "plugins": [
+    {
+      "name": "niri-plugin",
+      "version": "0.1.0",
+      "description": "Claude Code plugin for Niri window manager configuration and assistance",
+      "source": "./niri-plugin",
+      "category": "system-administration",
+      "author": {
+        "name": "edwards"
+      }
+    }
+  ]
+}
