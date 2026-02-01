@@ -34,6 +34,7 @@ Or if you've cloned this repository elsewhere:
 | `niri` | Niri window manager configuration assistance |
 | `themes` | Theme applications with Rose Pine color scheme |
 | `waybar` | Waybar status bar configuration assistance |
+| `bazzite` | Bazzite Linux usage and configuration assistance |
 
 ## Adding New Plugins
 

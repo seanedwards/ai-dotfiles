@@ -39,6 +39,16 @@
       "author": {
         "name": "edwards"
       }
+    },
+    {
+      "name": "bazzite",
+      "version": "0.1.0",
+      "description": "Claude Code plugin for Bazzite Linux usage and configuration assistance",
+      "source": "./bazzite",
+      "category": "system-administration",
+      "author": {
+        "name": "edwards"
+      }
     }
   ]
 }
