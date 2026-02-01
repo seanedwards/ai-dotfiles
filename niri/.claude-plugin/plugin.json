@@ -1,5 +1,5 @@
 {
-  "name": "niri-plugin",
+  "name": "niri",
   "version": "0.1.0",
   "description": "Claude Code plugin for Niri window manager configuration and assistance"
 }

@@ -1,0 +1,9 @@
+{
+  "name": "themes",
+  "version": "1.0.0",
+  "description": "Theme applications with Rose Pine color scheme by navigating the Rose Pine documentation ecosystem",
+  "author": {
+    "name": "edwards"
+  },
+  "keywords": ["theming", "rose-pine", "colors", "dotfiles"]
+}

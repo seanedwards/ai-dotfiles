@@ -1,9 +1,9 @@
-[submodule "niri-plugin/skills/configuring-niri/docs"]
-	path = niri-plugin/skills/configuring-niri/docs
-	url = git@github.com:YaLTeR/niri.wiki.git
 [submodule "waybar/skills/configuring-waybar/docs"]
 	path = waybar/skills/configuring-waybar/docs
 	url = https://github.com/Alexays/Waybar.wiki.git
 [submodule "bazzite/skills/using-bazzite/docs"]
 	path = bazzite/skills/using-bazzite/docs
 	url = git@github.com:ublue-os/docs.bazzite.gg.git
+[submodule "niri/skills/configuring-niri/docs"]
+	path = niri/skills/configuring-niri/docs
+	url = git@github.com:YaLTeR/niri.wiki.git
