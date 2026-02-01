@@ -19,6 +19,21 @@ Bazzite is a Fedora Atomic (immutable) Linux distribution optimized for gaming, 
 
 **Always read docs before answering** - don't rely on general knowledge about Bazzite.
 
+## Bazzite Image Variants
+
+Users must choose the correct image. Key decision points:
+
+| Question | Image Type |
+|----------|------------|
+| Desktop/laptop without Steam Gaming Mode? | `bazzite` or `bazzite-gnome` |
+| Need Nvidia GPU support? | Add `-nvidia` (legacy) or `-nvidia-open` (RTX/GTX 16+) |
+| Want Steam Gaming Mode (console-like)? | `bazzite-deck` variants |
+| Software development focus? | Rebase to `bazzite-dx` |
+
+**Check current image:** `rpm-ostree status`
+
+For detailed image selection, read `docs/src/General/FAQ.md` (see "What Bazzite image do I use?")
+
 ## Topic Index
 
 ### Getting Started
@@ -26,10 +41,12 @@ Bazzite is a Fedora Atomic (immutable) Linux distribution optimized for gaming, 
 | User asks about... | Read this file |
 |--------------------|----------------|
 | What is Bazzite, overview | `docs/src/index.md` |
-| Common questions | `docs/src/General/FAQ.md` |
-| Terminology, concepts | `docs/src/General/terms.md` |
-| Comparison to Fedora Atomic | `docs/src/General/Fedora_Atomic_Comparison.md` |
+| General section overview | `docs/src/General/index.md` |
+| Common questions, which image to use | `docs/src/General/FAQ.md` |
+| Terminology (immutable, ostree, etc) | `docs/src/General/terms.md` |
+| Comparison to Fedora Atomic/Silverblue | `docs/src/General/Fedora_Atomic_Comparison.md` |
 | Comparison to SteamOS | `docs/src/General/SteamOS_Comparison.md` |
+| Community resources, external guides | `docs/src/General/community-links.md` |
 
 ### Installation Guides
 
@@ -53,8 +70,8 @@ Bazzite is a Fedora Atomic (immutable) Linux distribution optimized for gaming, 
 
 | User asks about... | Read this file |
 |--------------------|----------------|
-| Software install overview | `docs/src/Installing_and_Managing_Software/index.md` |
-| ujust commands | `docs/src/Installing_and_Managing_Software/ujust.md` |
+| Software install overview, priority | `docs/src/Installing_and_Managing_Software/index.md` |
+| ujust commands, Bazzite Portal | `docs/src/Installing_and_Managing_Software/ujust.md` |
 | Flatpak apps | `docs/src/Installing_and_Managing_Software/Flatpak.md` |
 | Homebrew packages | `docs/src/Installing_and_Managing_Software/Homebrew.md` |
 | Distrobox containers | `docs/src/Installing_and_Managing_Software/Distrobox.md` |
@@ -78,16 +95,18 @@ Bazzite is a Fedora Atomic (immutable) Linux distribution optimized for gaming, 
 | User asks about... | Read this file |
 |--------------------|----------------|
 | Gaming overview | `docs/src/Gaming/index.md` |
-| Game launchers (Steam, Lutris, etc) | `docs/src/Gaming/Game_Launchers.md` |
-| Hardware compatibility | `docs/src/Gaming/Hardware_compatibility_for_gaming.md` |
-| Modding games | `docs/src/Gaming/Managing_and_modding_games.md` |
+| Steam setup, Proton, launch options | `docs/src/Gaming/Game_Launchers.md` |
+| Lutris, non-Steam games | `docs/src/Gaming/Game_Launchers.md` |
+| Heroic, Epic, GOG, Amazon | `docs/src/Gaming/Game_Launchers.md` |
+| Hardware compatibility (GPU, controllers) | `docs/src/Gaming/Hardware_compatibility_for_gaming.md` |
+| Modding games (Nexus, Vortex, MO2) | `docs/src/Gaming/Managing_and_modding_games.md` |
 | Common gaming issues | `docs/src/Gaming/Common_gaming_issues.md` |
 
-### Handheld & HTPC Edition
+### Handheld & HTPC Edition (Steam Gaming Mode)
 
 | User asks about... | Read this file |
 |--------------------|----------------|
-| Steam Gaming Mode | `docs/src/Handheld_and_HTPC_edition/Steam_Gaming_Mode.md` |
+| Steam Gaming Mode overview | `docs/src/Handheld_and_HTPC_edition/Steam_Gaming_Mode.md` |
 | Handheld wiki overview | `docs/src/Handheld_and_HTPC_edition/Handheld_Wiki/index.md` |
 | Steam Deck specifics | `docs/src/Handheld_and_HTPC_edition/Handheld_Wiki/Steam_Deck.md` |
 | Lenovo Legion Go | `docs/src/Handheld_and_HTPC_edition/Handheld_Wiki/Lenovo_Legion_Go.md` |
@@ -97,16 +116,16 @@ Bazzite is a Fedora Atomic (immutable) Linux distribution optimized for gaming, 
 | Ayaneo handhelds | `docs/src/Handheld_and_HTPC_edition/Handheld_Wiki/Ayaneo_Handhelds.md` |
 | Ayn handhelds | `docs/src/Handheld_and_HTPC_edition/Handheld_Wiki/Ayn_Handhelds.md` |
 | Other handhelds | `docs/src/Handheld_and_HTPC_edition/Handheld_Wiki/Other_Handhelds.md` |
-| Handheld quirks | `docs/src/Handheld_and_HTPC_edition/quirks.md` |
+| Gaming Mode quirks, workarounds | `docs/src/Handheld_and_HTPC_edition/quirks.md` |
 | Legion Go BIOS update | `docs/src/Handheld_and_HTPC_edition/update-bios-lenovo-legion-go.md` |
 
-### Troubleshooting & Advanced
+### Troubleshooting & Configuration
 
 | User asks about... | Read this file |
 |--------------------|----------------|
 | Common issues & fixes | `docs/src/General/issues_and_resolutions.md` |
 | Reporting bugs | `docs/src/General/reporting_bugs.md` |
-| Desktop environment tweaks | `docs/src/General/Desktop_Environment_Tweaks.md` |
+| KDE/GNOME customization, themes | `docs/src/General/Desktop_Environment_Tweaks.md` |
 | VPN setup | `docs/src/General/VPN.md` |
 | ZeroTier networking | `docs/src/General/zerotier.md` |
 
@@ -127,29 +146,53 @@ Bazzite is a Fedora Atomic (immutable) Linux distribution optimized for gaming, 
 | Creating custom images | `docs/src/Advanced/creating_custom_image.md` |
 | Looking Glass (VM gaming) | `docs/src/Advanced/looking-glass.md` |
 | SteelSeries Arctis manager | `docs/src/Advanced/arctis-manager.md` |
-| ScopeBuddy tool | `docs/src/Advanced/scopebuddy.md` |
+| ScopeBuddy (gamescope options) | `docs/src/Advanced/scopebuddy.md` |
 
 ## Keyword Quick Reference
 
-Common search terms -> doc file:
+Common search terms -> doc file (all paths under `docs/src/`):
 
-- **install, setup** -> Installation guides (by device type)
-- **update, upgrade** -> `Updates_Rollbacks_and_Rebasing/updating_guide.md`
-- **rollback, downgrade, revert** -> `Updates_Rollbacks_and_Rebasing/rolling_back_system_updates.md`
-- **rebase, switch image** -> `Updates_Rollbacks_and_Rebasing/rebase_guide.md`
-- **flatpak, flathub** -> `Installing_and_Managing_Software/Flatpak.md`
-- **brew, homebrew** -> `Installing_and_Managing_Software/Homebrew.md`
-- **container, distrobox** -> `Installing_and_Managing_Software/Distrobox.md`
-- **ujust, just** -> `Installing_and_Managing_Software/ujust.md`
-- **android, waydroid** -> `Installing_and_Managing_Software/Waydroid_Setup_Guide.md`
-- **steam, proton, wine** -> `Gaming/Game_Launchers.md`
-- **deck, gaming mode** -> `Handheld_and_HTPC_edition/Steam_Gaming_Mode.md`
-- **nvidia, amd, gpu** -> `Gaming/Hardware_compatibility_for_gaming.md`
-- **controller, gamepad** -> `Gaming/Hardware_compatibility_for_gaming.md`
-- **mod, nexus, vortex** -> `Gaming/Managing_and_modding_games.md`
+### Installation & Setup
+- **install, setup, ISO** -> `General/Installation_Guide/` (by device type)
 - **dual boot, windows** -> `General/Installation_Guide/dual_boot_setup_guide.md`
 - **secure boot, mokutil** -> `General/Installation_Guide/secure_boot.md`
+- **partition, btrfs** -> `General/Installation_Guide/manual_partitioning.md`
+- **which image, -deck, -gnome** -> `General/FAQ.md`
+
+### Software Management
+- **ujust, just, bazzite portal** -> `Installing_and_Managing_Software/ujust.md`
+- **flatpak, flathub** -> `Installing_and_Managing_Software/Flatpak.md`
+- **brew, homebrew** -> `Installing_and_Managing_Software/Homebrew.md`
+- **container, distrobox, podman** -> `Installing_and_Managing_Software/Distrobox.md`
+- **android, waydroid** -> `Installing_and_Managing_Software/Waydroid_Setup_Guide.md`
+- **layer, rpm-ostree** -> `Installing_and_Managing_Software/rpm-ostree.md`
+
+### Updates & System
+- **update, upgrade** -> `Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/updating_guide.md`
+- **rollback, downgrade, revert** -> `Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/rolling_back_system_updates.md`
+- **rebase, switch image** -> `Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/rebase_guide.md`
 - **immutable, atomic, ostree** -> `General/terms.md` + `General/Fedora_Atomic_Comparison.md`
+
+### Gaming
+- **steam, proton, wine, launch options** -> `Gaming/Game_Launchers.md`
+- **lutris, heroic, gog, epic** -> `Gaming/Game_Launchers.md`
+- **nvidia, amd, gpu, driver** -> `Gaming/Hardware_compatibility_for_gaming.md`
+- **controller, gamepad, joystick** -> `Gaming/Hardware_compatibility_for_gaming.md` + `General/issues_and_resolutions.md`
+- **mod, nexus, vortex, mo2** -> `Gaming/Managing_and_modding_games.md`
+- **dlss, fsr, upscaling** -> `Gaming/Game_Launchers.md`
+
+### Handheld/HTPC
+- **deck, gaming mode, gamescope** -> `Handheld_and_HTPC_edition/Steam_Gaming_Mode.md`
+- **legion go, rog ally** -> Device-specific in `Handheld_and_HTPC_edition/Handheld_Wiki/`
+- **decky, css loader** -> `General/Desktop_Environment_Tweaks.md`
+- **big picture, couch** -> `Handheld_and_HTPC_edition/Steam_Gaming_Mode.md`
+
+### Troubleshooting
+- **wifi, ethernet, network** -> `General/issues_and_resolutions.md`
+- **audio, sound, volume** -> `General/issues_and_resolutions.md`
+- **auto login** -> `General/issues_and_resolutions.md`
+- **fast startup (Windows)** -> `General/issues_and_resolutions.md`
+- **kde, gnome, theme** -> `General/Desktop_Environment_Tweaks.md`
 
 ## Software Installation Priority
 
@@ -171,7 +214,12 @@ ujust update              # Update everything
 ujust bios                # Check BIOS updates (Framework, handhelds)
 
 # Software discovery
+ujust                     # List all available commands
 ujust --choose            # Interactive menu of available tasks
+ujust | grep "keyword"    # Search for specific commands
+
+# View ujust script source
+ujust --show <command>    # See what a command does before running
 
 # Rollback
 ujust rollback            # Rollback helper
@@ -183,3 +231,15 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/bazzite:stable
 # System info
 rpm-ostree status         # Show current and previous deployments
 ```
+
+## ujust Command Prefixes
+
+| Prefix | Purpose | Example |
+|--------|---------|---------|
+| `install-` | Install software | `ujust install-decky` |
+| `setup-` | Install with config/uninstall options | `ujust setup-gaming` |
+| `configure-` | Configure existing features | `ujust configure-waydroid` |
+| `toggle-` | Enable/disable features | `ujust toggle-updates` |
+| `fix-` | Fix/patch issues | `ujust fix-audio` |
+| `get-` | Get extensions/plugins | `ujust get-decky-plugins` |
+| (no prefix) | Common shortcuts | `ujust update`, `ujust rollback` |
