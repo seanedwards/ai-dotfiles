@@ -11,10 +11,30 @@
   },
   "plugins": [
     {
-      "name": "niri-plugin",
+      "name": "niri",
       "version": "0.1.0",
       "description": "Claude Code plugin for Niri window manager configuration and assistance",
-      "source": "./niri-plugin",
+      "source": "./niri",
+      "category": "system-administration",
+      "author": {
+        "name": "edwards"
+      }
+    },
+    {
+      "name": "themes",
+      "version": "1.0.0",
+      "description": "Theme applications with Rose Pine color scheme by navigating the Rose Pine documentation ecosystem",
+      "source": "./themes",
+      "category": "theming",
+      "author": {
+        "name": "edwards"
+      }
+    },
+    {
+      "name": "waybar",
+      "version": "0.1.0",
+      "description": "Claude Code plugin for Waybar status bar configuration and assistance",
+      "source": "./waybar",
       "category": "system-administration",
       "author": {
         "name": "edwards"

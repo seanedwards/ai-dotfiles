@@ -24,14 +24,16 @@ Or if you've cloned this repository elsewhere:
 ### Install a plugin
 
 ```bash
-/plugin install niri-plugin@ai-dotfiles
+/plugin install niri@ai-dotfiles
 ```
 
 ## Available Plugins
 
 | Plugin | Description |
 |--------|-------------|
-| `niri-plugin` | Niri window manager configuration assistance |
+| `niri` | Niri window manager configuration assistance |
+| `themes` | Theme applications with Rose Pine color scheme |
+| `waybar` | Waybar status bar configuration assistance |
 
 ## Adding New Plugins
 

@@ -1,3 +1,6 @@
 [submodule "niri-plugin/skills/configuring-niri/docs"]
 	path = niri-plugin/skills/configuring-niri/docs
 	url = git@github.com:YaLTeR/niri.wiki.git
+[submodule "waybar/skills/configuring-waybar/docs"]
+	path = waybar/skills/configuring-waybar/docs
+	url = https://github.com/Alexays/Waybar.wiki.git

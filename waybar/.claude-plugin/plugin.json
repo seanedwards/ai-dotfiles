@@ -1,0 +1,5 @@
+{
+  "name": "waybar",
+  "version": "0.1.0",
+  "description": "Claude Code plugin for Waybar status bar configuration and assistance"
+}
